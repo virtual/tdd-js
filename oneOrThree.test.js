@@ -5,17 +5,19 @@ var expect = chai.expect;
 
 //Write a JavaScript program to test if an array of integers of length 2 contains 1 or a 3
 var oneOrThree = function (arr) {
-  return arr;
+  return ( (arr.length === 2) && 
+    (arr.indexOf(1) !== -1 ||  arr.indexOf(3) !== -1)
+  );
 }
 describe("oneOrThreeFunction", function () {
-  it('is returning array', function () {
+  it('returns a boolean', function () {
     var val = oneOrThree([]);
-    val.should.be.a('array');
+    expect(val).to.be.a('boolean');
   });
 
-  it('has two elements', function () {
+  it('checks if array length is two', function () {
     var val = oneOrThree([2, 3]);
-    assert.lengthOf(val, 2);
+    expect(val).to.equal(true);
   });
 
   it('val equals one or three', function () {
