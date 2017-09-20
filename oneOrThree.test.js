@@ -24,4 +24,9 @@ describe("oneOrThreeFunction", function () {
     var val = oneOrThree([1, 3, 7]);
     expect(val).to.equal(false);
   });
+
+  // if index 0 is 1
+  // if index 1 is 1
+  // if index 0 is 3
+  // if index 1 is 3
 });
